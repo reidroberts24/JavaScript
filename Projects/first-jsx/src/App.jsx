@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import './App.css'
-import PersonCard from './components/PersonCard'
-
+import React from 'react';
+import './App.css';
+import User from './components/User'
+    
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-      <div className='App'>
-        <PersonCard />
-      </div>
-  );
+    return (
+        <div className="App">
+            <User name="John Doe" 
+            age={30} 
+            email="johndoe@example.com" />
+        </div>
+    );
 }
 
 export default App

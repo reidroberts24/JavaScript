@@ -10,25 +10,25 @@ function App() {
         <PersonCard 
         last={"Prime"}
         first={"Coach"}
-        age={"56"}
+        age={56}
         hairColor={"Black"}
         />
         <PersonCard 
         last={"Jackson"}
         first={"Bo"}
-        age={"60"}
+        age={60}
         hairColor={"N/A"}
         />
         <PersonCard 
         last={"Messi"}
         first={"Lionel"}
-        age={"36"}
+        age={36}
         hairColor={"N/A"}
         />
         <PersonCard 
         last={"Jordan"}
         first={"Michael"}
-        age={"60"}
+        age={60}
         hairColor={"N/A"}
         />
       </div>

@@ -1,0 +1,11 @@
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.taskItem span {
+    flex: 1;
+    margin-left: 10px;
+}

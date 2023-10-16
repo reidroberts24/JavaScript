@@ -1,0 +1,19 @@
+.main {
+  width: calc(80% - 20px);  
+  margin: 10px; 
+  margin-left: 5px;
+  box-sizing: border-box;
+  /* Any other styles you want */
+}
+  
+  .main .subcontents-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80%; 
+  }
+  
+  .main .advertisement {
+    height: 20%; 
+    width: 100%; 
+  }

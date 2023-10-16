@@ -1,0 +1,8 @@
+.navigation {
+  width: 20%;  
+  margin: 10px; 
+  box-sizing: border-box;
+  color: black;
+  background-color: blue;
+  border: 1px solid black;
+}

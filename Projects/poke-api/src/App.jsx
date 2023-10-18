@@ -1,20 +1,13 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import axios from 'axios';
 
 function App() {
   const [pokeList, setPokeList] = useState([])
 
   useEffect( () => {
-      fetch('https://pokeapi.co/api/v2/pokemon?limit=807')
-        .then(response => {
-          return response.json()
-        })
-        .then( response => {
-          setPokeList(response.results)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
+      axios.get('https://pokeapi.co/api/v2/pokemon?limit=807')
+        .then(response => {setPokeList(response.data.results)})
     }, []);
 
   return (

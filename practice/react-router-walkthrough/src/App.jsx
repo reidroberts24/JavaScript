@@ -1,29 +1,10 @@
 import { useState } from 'react'
 import './App.css'
+import Home from './components/Home'
+import About from './components/About'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 
-const Home = (props) => {
-  return(
-    <div>
-      <h1 style={{ color: "red" }}>
-        Home Component
-      </h1>
-      <Link to={ "/about" }>Go to About</Link>
-    </div>
-  )
-}
-
-const About = (props) => {
-  return(
-    <div>
-      <h1 style={{ color: "blue" }}>
-        About Component
-      </h1>
-      <Link to={ "/" }>Go back Home</Link>
-    </div>
-  )
-}
 function App() {
   const [count, setCount] = useState(0)
 

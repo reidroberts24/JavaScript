@@ -11,21 +11,27 @@ const Home = (props) => {
 const ShowPath = (props) => {
   //useParams to get all 3 variables
   const { param1, param2, param3} = useParams();
-  if (!isNan(param1)) {
+  if (!isNaN(param1)) {
     return(
       <h1>The number is: { param1 }</h1>
     )
-  } 
-
+  }
   if (param2 && param3) {
     return(
-      <h1 style={{ color: param2, backgroundColor: param3}}>The word is: { param1 }</h1>
+      <h1 style={{ color: param2, backgroundColor: param3}}>
+        The word is: { param1 }
+      </h1>
     )
   }
+
+  
+
   
   if (param2) {
     return(
-      <h1 style={{ color: param2}}>The word is: { param1 }</h1>
+      <h1 style={{ color: param2}}>
+        The word is: { param1 }
+      </h1>
     )
   }
 
@@ -41,6 +47,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={ <Home/> }/>
+        <Route path='/:param1' element={ <ShowPath/> }/>
+        <Route path='/:param1/:param2' element={ <ShowPath/> }/>
         <Route path='/:param1/:param2/:param3' element={ <ShowPath/> }/>
       </Routes>
     </BrowserRouter>

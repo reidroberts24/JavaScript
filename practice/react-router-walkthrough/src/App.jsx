@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 
 const Home = (props) => {
@@ -9,6 +9,7 @@ const Home = (props) => {
       <h1 style={{ color: "red" }}>
         Home Component
       </h1>
+      <Link to={ "/about" }>Go to About</Link>
     </div>
   )
 }
@@ -19,6 +20,7 @@ const About = (props) => {
       <h1 style={{ color: "blue" }}>
         About Component
       </h1>
+      <Link to={ "/" }>Go back Home</Link>
     </div>
   )
 }

@@ -9,4 +9,4 @@ app.get("/api", (req, res) => {
 });
 
 // this needs to be below the other code blocks
-app.listen( port, () => console.log(`Listening on port: ${port}`) );
+app.listen( port, () => console.log(`Listening on port: ${port}`) ); 

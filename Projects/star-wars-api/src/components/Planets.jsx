@@ -24,14 +24,14 @@ const Planets = (props) => {
         return(
             <div>
                 <h1>{ apiData.name }</h1>
-                <p>Diameter: { apiData.diameter}</p>
-                <p>Rotation Period: { apiData.rotation_period}</p>
-                <p>Orbital Period: { apiData.orbital_period}</p>
-                <p>Gravity G units: { apiData.gravity}</p>
+                <p>Diameter: { apiData.diameter } km</p>
+                <p>Rotation Period: { apiData.rotation_period } hours</p>
+                <p>Orbital Period: { apiData.orbital_period } days</p>
+                <p>Gravity: { apiData.gravity } G unit(s)</p>
                 <p>Population: { apiData.population }</p>
                 <p>Climate: { apiData.climate }</p>
                 <p>Terrain: { apiData.terrain }</p>
-                <p>Surface Water: { apiData.surface_water }</p>
+                <p>Surface Water: { apiData.surface_water }%</p>
                 <p>Residents: { apiData.residents }</p>
                 <p>Films: { apiData.films }</p>
                 <p>Created: { apiData.created }</p>

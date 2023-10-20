@@ -15,8 +15,8 @@ function App() {
 
   return (
     <div >
-      <Form/>
       <BrowserRouter>
+      <Form/>
         <Routes>
           <Route path='/planets/:id' element={ <Planets/>}/>
         </Routes>

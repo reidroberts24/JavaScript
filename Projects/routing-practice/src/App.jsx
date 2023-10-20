@@ -24,9 +24,6 @@ const ShowPath = (props) => {
     )
   }
 
-  
-
-  
   if (param2) {
     return(
       <h1 style={{ color: param2}}>

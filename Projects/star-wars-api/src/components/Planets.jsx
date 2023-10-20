@@ -40,7 +40,7 @@ const Planets = (props) => {
             </div>
         )
     } else {
-        return <div>Error fetching data!</div>
+        return <div>These aren't the droids you're looking for</div>
     }
 }
 

@@ -1,0 +1,3 @@
+
+
+routes - will handle all of our routes for each model

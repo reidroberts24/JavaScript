@@ -1,0 +1,3 @@
+
+
+controllers - will hold all logic for each model (i.e creating, updating, etc...)

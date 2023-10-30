@@ -2,7 +2,7 @@ const User = require('../models/user.model')
 
 module.exports.findAllUsers = (req, res) => {
     User.find()
-        .then((allDaUsers) => {
+        .then((allDaUsers => {
             res.json({ users: allDaUsers })
         })
         .catch((err) => {

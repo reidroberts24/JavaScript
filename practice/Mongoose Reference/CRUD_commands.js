@@ -1,5 +1,4 @@
 ////////////////////// Defining a User Schema
-
     // Create a Schema for Users
     const UserSchema = new mongoose.Schema({
         name: { type: String },

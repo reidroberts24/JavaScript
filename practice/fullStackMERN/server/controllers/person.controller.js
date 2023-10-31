@@ -4,3 +4,8 @@ module.exports.index = (request, response) => {  //We are exporting a key:val pa
     });
 }
 
+const Person = require('../models/person.model')
+
+module.exports.index = (request, response) => {
+    
+}

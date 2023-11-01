@@ -11,8 +11,8 @@ const ProductForm = () => {
         
         axios.post('http://localhost:8000/api/products', {
             title,
-            price,
-            description
+            price,          
+            description // only works if the getter name matches schema name exactly
         })
             .then( res => {
                 console.log(res)

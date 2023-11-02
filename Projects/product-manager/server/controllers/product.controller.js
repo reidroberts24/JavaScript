@@ -7,17 +7,10 @@ module.exports.createProduct = (req, res) => {
         .catch( err => res.json(err))
 }
 
-
 module.exports.getAllProducts = (req, res) => {
     Product.find({})
-        .then( allProducts => {
-            console.log(allProducts);
-            res.json(allProducts)
-        })
-        .catch( err => {
-            console.log(err)
-            res.json(err)
-        })
+        .then( allProducts => res.json(allProducts) )
+        .catch( err => res.json(err) )
 }
 
 module.exports.getOneProduct = (req, res) => {
@@ -26,3 +19,14 @@ module.exports.getOneProduct = (req, res) => {
         .catch( err => res.json(err) )
 }
 
+module.exports.updateProduct = (req, res) => {
+    Product.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true})
+        .then( updatedProduct => res.json(updatedProduct) )
+        .catch( err => res.json(err))
+}
+
+module.exports.deleteProduct = (req, res) => {
+    Product.findOneAndDelete({_id: req.params.id})
+        .then(deleteConfirmation => res.json(deleteConfirmation))
+        .catch(err => res.json(err))
+}

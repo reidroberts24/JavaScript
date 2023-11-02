@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+
 const Details = (props) => {
     const [product, setProduct] = useState({});
     const { id } = useParams();
+    const navigate = useNavigate();
 
     useEffect( () => {
         axios.get('http://localhost:8000/api/products/' + id)
@@ -12,6 +14,12 @@ const Details = (props) => {
             })
             .catch( err => console.log(err));
     }, []);
+
+    const deleteProduct = (productID) => {
+        axios.delete('http://localhost:8000/api/products/' + productID)
+            .then(res => { navigate('/home') })
+            .catch(err => console.log(err));
+    }
 
     return (
         <div className="container mt-5">
@@ -25,7 +33,8 @@ const Details = (props) => {
                     <p className="card-text">Description: { product.description }</p>
                 </div>
                 <div className="card-footer">
-                    <Link to="/home" className="btn btn-secondary">Return Home</Link>
+                    <Link to="/home" className="btn btn-secondary mr-2">Return Home</Link> {/* Added margin-right here */}
+                    <button onClick={() => deleteProduct(product._id)} className="btn btn-danger">Delete</button>
                 </div>
             </div>
         </div>

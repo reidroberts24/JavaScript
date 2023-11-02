@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'; //styling
 
 const ProductList = (props) => {
     const {products, setProducts} = props
@@ -18,9 +20,9 @@ const ProductList = (props) => {
             <ul>
                 {products.map((product, index) => (
                     <li key={ index }>
-                        <h3>{ product.title }</h3>
-                        <p>Price: ${ product.price }</p>
-                        <p>Description: { product.description }</p>
+                        <h3>
+                            <Link to={ `/home/${product._id}`}>{ product.title }</Link>
+                        </h3>
                     </li>
                 ))}
             </ul>

@@ -1,13 +1,17 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ProductForm from './components/ProductForm';
+import Main from './views/Main';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div>
-      <ProductForm/>
+      <BrowserRouter>
+        <Routes>
+          <Route element={ <Main/> } path='/home' default />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

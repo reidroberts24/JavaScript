@@ -4,8 +4,8 @@ import axios from 'axios';
 const ProductForm = (props) => {
     const [ title, setTitle ] = useState("")
     const [ price, setPrice ] = useState(0)
-    const [ description, setDescription ] = useState("")
-    const { products, setProducts} = props
+    const [ description, setDescription ] = useState("") //destructuring state variables
+    const { products, setProducts} = props //destructuring props object
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,6 +18,7 @@ const ProductForm = (props) => {
             .then( res => {
                 console.log(res)
                 console.log(res.data)
+                setProducts([...products, res.data]) //update the lifted state of the products array to include the current value in state
             })
             .catch( err => console.log(err))
     }

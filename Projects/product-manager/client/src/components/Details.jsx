@@ -20,7 +20,7 @@ const Details = (props) => {
             .then(res => { navigate('/home') })
             .catch(err => console.log(err));
     }
-
+ 
     return (
         <div className="container mt-5">
             <div className="card">

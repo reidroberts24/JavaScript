@@ -1,27 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import DeleteButton from './DeleteButton';
+
 
 const ProductList = (props) => {
-    const { products, setProducts } = props;
-
-    useEffect(() => {
-        axios.get('http://localhost:8000/api/products')
-            .then(res => {
-                setProducts(res.data);
-            })
-            .catch(err => console.log(err));
-    }, []);
-
-    const removeFromDom = productID => {
-        setProducts(products.filter(product => product._id != productID))
-    }
-
-    const deleteProduct = (productID) => {
-        axios.delete('http://localhost:8000/api/products/' + productID)
-            .then(res => { removeFromDom(productID) })
-            .catch(err => console.log(err));
-    }
+    const { products, removeFromDom } = props;
 
     return (
         <div className="container">
@@ -34,7 +18,7 @@ const ProductList = (props) => {
                         </span>
                         <div>
                             <Link to={`/home/edit/${product._id}`} className="btn btn-warning ms-4 me-2">Edit</Link> {/* Added margin to the left of Edit button */}
-                            <button onClick={(e) => { deleteProduct(product._id) }} className="btn btn-danger">Delete</button>
+                            <DeleteButton productID={ product._id} successCallback={() => removeFromDom(product._id)} className="btn btn-danger" />
                         </div>
                     </li>
                 ))}

@@ -46,34 +46,3 @@ const Update = (props) => {
 }
 
 export default Update;
-
-/*
-<div className="container mt-4">
-            <h1 className="text-center mb-4">Update a Product</h1>
-            <form className="d-flex flex-column align-items-center" onSubmit={ updateProduct }>
-                <div className="mb-3 w-50">
-                    <label className="form-label">Title:</label>
-                    <input type="text" className="form-control" 
-                        name="title" 
-                        value={ title }
-                        onChange={(e) => { setTitle(e.target.value) }} />
-                </div>
-                <div className="mb-3 w-50">
-                    <label className="form-label">Price:</label>
-                    <input type="text" className="form-control"
-                        name="price"
-                        value={ price } 
-                        onChange={(e) => { setPrice(e.target.value) }} />
-                </div>
-                <div className="mb-3 w-50">
-                    <label className="form-label">Description:</label>
-                    <input type="text" className="form-control"
-                        name="description"
-                        value={ description } 
-                        onChange={(e) => { setDescription(e.target.value) }} />
-                </div>
-                <button type="submit" className="btn btn-primary">Update Product</button>
-            </form>
-        </div>
-
-*/

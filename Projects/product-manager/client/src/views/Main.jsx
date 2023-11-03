@@ -36,13 +36,13 @@ const Main = () => {
         <div className="container"> 
             <div className="row"> 
                 <div> 
-                    <ProductForm onSubmitProp={ createProduct } initialTitle="" initialPrice="" initialDescription=""/>
+                    <ProductForm onSubmitProp={ createProduct } initialTitle="" initialPrice="" initialDescription=""/> {/* the props passed to the ProductForm component are: onSubmitProp, initialTitle, etc. */}
                 </div>
             </div>
             <hr className="my-4"/>
             <div className="row">
                 <div>
-                    <ProductList products={products} removeFromDom={removeFromDom} />
+                    <ProductList products={products} removeFromDom={removeFromDom} /> {/* the props passed to the ProductList component are: products, removeFromDom */}
                 </div>
             </div>
         </div>

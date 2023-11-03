@@ -50,19 +50,3 @@ const Main = () => {
 }
 
 export default Main;
-
-/* 
-<div className="container"> 
-            <div className="row"> 
-                <div> 
-                    <ProductForm products={products} setProducts={setProducts} />
-                </div>
-            </div>
-            <hr className="my-4"/>
-            <div className="row">
-                <div>
-                    <ProductList products={products} setProducts={setProducts} />
-                </div>
-            </div>
-        </div>
-*/

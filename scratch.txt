@@ -1,0 +1,34 @@
+/client
+|-- src
+    |-- components
+    |   |-- Note.js
+    |   |-- Header.js
+    |   |-- NoteForm.js
+    |   |-- NoteList.js
+    |   `-- ErrorMessage.js
+    |
+    |-- views
+    |   |-- NoteWall.js
+    |   |-- WriteNote.js
+    |   `-- EditNote.js
+    |
+    |-- App.js
+    `-- main.js
+
+
+/server
+|-- models
+|   `-- note.model.js
+|
+|-- routes
+|   `-- note.routes.js
+|
+|-- controllers
+|   `-- note.controller.js
+|
+|-- config
+|   `-- mongoose.config.js
+|
+|-- package.json
+|-- package-lock.json
+`-- server.js
